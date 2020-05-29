@@ -35,9 +35,10 @@ while True:
         font = cv2.FONT_HERSHEY_DUPLEX
         cv2.putText(frame, 'Car',(x + 6, y - 6), font, 0.5, (0, 0, 255), 1)
         cv2.imshow('detected cars',frame)
+        #write video to output file
         out.write(frame)
         
-        
+        #press Esc or Q key to exit output screen
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
